@@ -1,0 +1,49 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Histogram
+
+# Generate some random data
+x = np.random.randn(1000)
+
+# Create a histogram plot
+plt.hist(x)
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.title('Histogram')
+plt.show()
+
+# Bar graph
+
+# Generate some random data
+data = np.random.randn(5)
+
+# Create a bar graph plot
+plt.bar(np.arange(len(data)), data)
+plt.xlabel('Bar')
+plt.ylabel('Value')
+plt.title('Bar Graph')
+plt.show()
+
+# Pie chart
+
+# Generate some random data
+data = np.random.randn(4)
+
+# Create a pie chart plot
+plt.pie(data, labels=['A', 'B', 'C', 'D'], autopct='%1.1f%%')
+plt.title('Pie Chart')
+plt.show()
+
+# Scatter plot
+
+# Generate some random data
+x = np.random.randn(100)
+y = np.random.randn(100)
+
+# Create a scatter plot plot
+plt.scatter(x, y)
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Scatter Plot')
+plt.show()
