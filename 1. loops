@@ -1,0 +1,44 @@
+# This program demonstrates decision control statements using if, else, elif, and a while loop.
+number = int(input("Enter a number: "))
+
+# Check if the number is even or odd
+if number % 2 == 0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
+
+is_prime = True
+
+# Check if the number is divisible by any number between 2 and its square root.
+for i in range(2, int(number**0.5) + 1):
+    if number % i == 0:
+        is_prime = False
+        break
+
+# Print the appropriate message based on the flag value.
+if is_prime:
+    print("The number is prime.")
+else:
+    print("The number is not prime.")
+
+# Print a list of all the prime numbers less than or equal to the user's input.
+
+# Initialize a list to store the prime numbers.
+prime_numbers = []
+
+# Iterate over the numbers from 2 to the user's input.
+for i in range(2, number + 1):
+    is_prime = True
+
+    # Check if the number is divisible by any number between 2 and its square root.
+    for j in range(2, int(i**0.5) + 1):
+        if i % j == 0:
+            is_prime = False
+            break
+
+    # If the number is prime, add it to the list.
+    if is_prime:
+        prime_numbers.append(i)
+
+# Print the list of prime numbers.
+print("The list of prime numbers less than or equal to {} is: {}".format(number, prime_numbers))
