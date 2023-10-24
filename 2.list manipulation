@@ -1,0 +1,67 @@
+# This program demonstrates list manipulation using inbuilt methods.
+
+# Create a list
+my_list = [1, 2, 3, 4, 5]
+
+# Print the list
+print(my_list)
+
+# Add an element to the list using the append() method
+my_list.append(6)
+
+# Print the list
+print(my_list)
+
+# Insert an element at a specific index in the list using the insert() method
+my_list.insert(0, 0)
+
+# Print the list
+print(my_list)
+
+# Remove an element from the list using the remove() method
+my_list.remove(3)
+
+# Print the list
+print(my_list)
+
+# Pop an element from the list using the pop() method
+my_list.pop(1)
+
+# Print the list
+print(my_list)
+
+# Reverse the list using the reverse() method
+my_list.reverse()
+
+# Print the list
+print(my_list)
+
+# Sort the list using the sort() method
+my_list.sort()
+
+# Print the list
+print(my_list)
+
+# Count the number of occurrences of an element in the list using the count() method
+count = my_list.count(2)
+
+# Print the count
+print(count)
+
+# Find the index of an element in the list using the index() method
+index = my_list.index(4)
+
+# Print the index
+print(index)
+
+# Copy the list using the copy() method
+new_list = my_list.copy()
+
+# Print the new list
+print(new_list)
+
+# Clear the list using the clear() method
+my_list.clear()
+
+# Print the list
+print(my_list)
