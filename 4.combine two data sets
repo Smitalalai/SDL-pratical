@@ -1,0 +1,24 @@
+import pandas as pd
+
+# Read the first dataset
+df1 = pd.read_csv('dataset1.csv')
+
+# Read the second dataset
+df2 = pd.read_csv('dataset2.csv')
+
+# Combine the two datasets
+combined_df = pd.concat([df1, df2], ignore_index=True)
+
+# Calculate the mean of the 'age' column
+mean_age = combined_df['age'].mean()
+
+# Calculate the median of the 'height' column
+median_height = combined_df['height'].median()
+
+# Calculate the standard deviation of the 'weight' column
+std_weight = combined_df['weight'].std()
+
+# Print the results
+print('Mean age:', mean_age)
+print('Median height:', median_height)
+print('Standard deviation of weight:', std_weight)
