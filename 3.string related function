@@ -1,0 +1,90 @@
+# This program implements string-related functions.
+
+def capitalize(string):
+  """Capitalizes the first letter of a string.
+
+  Args:
+    string: A string.
+
+  Returns:
+    A string with the first letter capitalized.
+  """
+  return string[0].upper() + string[1:]
+
+def reverse(string):
+  """Reverses the order of characters in a string.
+
+  Args:
+    string: A string.
+
+  Returns:
+    A string with the characters reversed.
+  """
+  reversed_string = ""
+  for i in range(len(string) - 1, -1, -1):
+    reversed_string += string[i]
+  return reversed_string
+
+def count_substring(string, substring):
+  """Counts the number of occurrences of a substring in a string.
+
+  Args:
+    string: A string.
+    substring: A substring to search for in the string.
+
+  Returns:
+    The number of occurrences of the substring in the string.
+  """
+  count = 0
+  for i in range(len(string) - len(substring) + 1):
+    if string[i:i + len(substring)] == substring:
+      count += 1
+  return count
+
+def find_substring(string, substring):
+  """Finds the index of the first occurrence of a substring in a string.
+
+  Args:
+    string: A string.
+    substring: A substring to search for in the string.
+
+  Returns:
+    The index of the first occurrence of the substring in the string, or -1 if the substring is not found.
+  """
+  index = string.find(substring)
+  return index if index != -1 else -1
+
+def split_string(string, delimiter):
+  """Splits a string into a list of strings using a delimiter.
+
+  Args:
+    string: A string.
+    delimiter: A delimiter to use to split the string.
+
+  Returns:
+    A list of strings.
+  """
+  string_list = string.split(delimiter)
+  return string_list
+
+# Example usage:
+
+# Capitalize the first letter of a string.
+capitalized_string = capitalize("hello world")
+print(capitalized_string)
+
+# Reverse the order of characters in a string.
+reversed_string = reverse("hello world")
+print(reversed_string)
+
+# Count the number of occurrences of a substring in a string.
+count = count_substring("hello world", "world")
+print(count)
+
+# Find the index of the first occurrence of a substring in a string.
+index = find_substring("hello world", "world")
+print(index)
+
+# Split a string into a list of strings using a delimiter.
+string_list = split_string("hello world", " ")
+print(string_list)
